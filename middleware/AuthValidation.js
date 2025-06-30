@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const schema  = require('../model/user');
+const schema  = require('../model/User');
 
 const signupValidation = (req, res, next) =>{
     const NewSchema = Joi.object({
