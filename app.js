@@ -15,6 +15,15 @@ require("dotenv").config();
 app.use(express.json());
 app.use(places);
 
+app.use(
+    cors({
+        origin:[
+            "https://smart-travel-planner-with-ai-83rj.onrender.com",
+        ],
+        credentials:true,
+    })
+)
+
 app.get("/", (req,res) =>{
     res.send("server is running");
 })
