@@ -25,7 +25,7 @@ const fetchWithRetry = async (url, options, retries = 3, delay = 2000) => {
 
 const travelPlanner = async (req, res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         const { venue, day, total_people } = req.body;
 
         if (!venue || !day || !total_people) {

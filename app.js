@@ -9,20 +9,19 @@ const travelRouter = require('./routes/travel');
 
 require('./db');
 require("dotenv").config();
-
-
-//middleware
-app.use(express.json());
-app.use(places);
-
 app.use(
     cors({
         origin:[
-            "https://smart-travel-planner-with-ai-83rj.onrender.com",
+            "http://localhost:5173",
+            "https://smart-travel-planner-with-ai-83rj.onrender.com"
         ],
-        credentials:true,
+        // credentials:true,
     })
 )
+app.use(express.json());
+app.use(places);
+
+
 
 app.get("/", (req,res) =>{
     res.send("server is running");
