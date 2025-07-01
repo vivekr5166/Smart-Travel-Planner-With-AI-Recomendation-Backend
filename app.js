@@ -12,11 +12,11 @@ require("dotenv").config();
 app.use(
     cors({
         origin:[
-            "http://localhost:5173",
+            "http://localhost:5174",
             "https://smart-travel-planner-with-ai-83rj.onrender.com",
             "https://smarttravelai.netlify.app/"
         ],
-        // credentials:true,
+        
     })
 )
 app.use(express.json());
