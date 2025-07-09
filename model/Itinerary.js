@@ -16,7 +16,7 @@ const daySchema = new mongoose.Schema({
 });
 
 const itinerarySchema = new mongoose.Schema({
-  email: { type: String, required: true },
+  // email: { type: String, required: true },
   venue: { type: String },
   day_count: { type: String }, 
   total_people: { type: Number },
