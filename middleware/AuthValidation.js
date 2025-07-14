@@ -3,7 +3,7 @@ const schema  = require('../model/User');
 
 const signupValidation = (req, res, next) =>{
     const NewSchema = Joi.object({
-        name: Joi.string().alphanum().min(3).max(100).required(),
+        name: Joi.string().min(3).max(100).required(),
         email: Joi.string().email().required(),
         password: Joi.string().min(4).max(100).required(),
     });
